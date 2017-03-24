@@ -4,7 +4,7 @@ webroot=/www
 
 chown -Rf www:www /www
 
-if [ -f "$WEBROOT/composer.lock" ]; then
+if [ -f "/www/composer.lock" ]; then
   php composer.phar install --no-dev
 fi
 
