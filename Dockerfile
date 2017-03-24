@@ -20,7 +20,7 @@ RUN ln -s /usr/bin/php7 /usr/bin/php
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
     && php -r "unlink('composer-setup.php');" \
-    && mv composer.phar /usr/bin/composer
+    && mv composer.phar /usr/bin/composer \
     && chmod +x /usr/bin/composer
 
 ### Setup NGINX
