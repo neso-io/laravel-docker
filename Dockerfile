@@ -19,7 +19,9 @@ RUN ln -s /usr/bin/php7 /usr/bin/php
 ### Install Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
-    && php -r "unlink('composer-setup.php');"
+    && php -r "unlink('composer-setup.php');" \
+    && mv composer.phar /usr/bin/composer
+    && chmod +x /usr/bin/composer
 
 ### Setup NGINX
 RUN adduser -D -u 1000 -g 'www' www \
