@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-RUN apk add --update tzdata supervisor bash
+RUN apk add --update tzdata supervisor bash git
 
 ADD config/supervisord.conf /etc/supervisord.conf
 
