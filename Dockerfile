@@ -45,8 +45,6 @@ ADD config/php-fpm.conf /etc/php7/php-fpm.conf
 ADD scripts/start.sh /start.sh
 RUN chmod 755 /start.sh
 
-VOLUME /www
-
 EXPOSE 80
 
 CMD ["/bin/bash", "/start.sh"]
