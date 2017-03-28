@@ -39,8 +39,9 @@ ADD config/nginx/sites/* /etc/nginx/sites-available/
 ADD config/nginx/default /www
 
 ### Setup PHP
+ADD php.ini /etc/php7/php.ini
 ADD config/php-fpm.conf /etc/php7/php-fpm.conf
-
+ADD config/php-fpm.d/* /etc/php7/php-fpm.d/
 
 ADD scripts/start.sh /start.sh
 RUN chmod 755 /start.sh
