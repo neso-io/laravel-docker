@@ -13,7 +13,7 @@ RUN TIMEZONE="Europe/London" \
 RUN apk add nginx
 
 ### Install PHP
-RUN apk add php7 php7-fpm php7-mcrypt php7-mbstring php7-soap php7-openssl php7-phar php7-json php7-dom php7-pdo php7-zip php7-bcmath php7-gd php7-odbc php7-pdo_mysql php7-xmlrpc php7-iconv php7-curl php7-ctype
+RUN apk add php7 php7-fpm php7-mcrypt php7-session php7-mbstring php7-soap php7-openssl php7-phar php7-json php7-dom php7-pdo php7-zip php7-bcmath php7-gd php7-odbc php7-pdo_mysql php7-xmlrpc php7-iconv php7-curl php7-ctype
 RUN ln -s /usr/bin/php7 /usr/bin/php
 
 ### Install Composer
