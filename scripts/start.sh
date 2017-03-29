@@ -5,7 +5,7 @@ webroot=/www
 cd /www
 chown -Rf www:www *
 
-if [[ -z "${env}" ]]; then
+if [ -z ${env+x}  ] && [ ! -f /www/.env ]; then
     echo $env > .env
 fi
 
